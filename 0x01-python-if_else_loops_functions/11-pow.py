@@ -1,17 +1,11 @@
-#!/usr/bin/env python3
-
-def pow(a, b):
-    result = 1
-    if b >= 0:
-        for _ in range(b):
-            result *= a
-    else:
-        for _ in range(-b):
-            result /= a
-    return result
-
-print(pow(2, 2))
-print(pow(98, 2))
-print(pow(98, 0))
-print(pow(100, -2))
-print(pow(-4, 5))
+#!/usr/bin/python3
+def fizzbuzz():
+    for a in range(1, 101):
+        if a % 3 == 0 and a % 5 == 0:
+            print("FizzBuzz ", end="")
+        elif a % 3 == 0:
+            print("Fizz ", end="")
+        elif a % 5 == 0:
+            print("Buzz ", end="")
+        else:
+            print("{:d} ".format(a), end="")
