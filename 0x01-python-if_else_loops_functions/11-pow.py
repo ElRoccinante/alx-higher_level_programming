@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-def pow(a, b):
+def power(a, b):
     return a ** b
 
-print(round(pow(2, 2), 2))
-print(round(pow(98, 2), 2))
-print(round(pow(98, 0), 2))
-print(round(pow(100, -2), 2))
-print(round(pow(-4, 5), 2))
+pow_func = __import__('11-pow').pow
+
+print(round(pow_func(2, 2), 2))
+print(round(pow_func(98, 2), 2))
+print(round(pow_func(98, 0), 2))
+print(round(pow_func(100, -2), 2))
+print(round(pow_func(-4, 5), 2))
