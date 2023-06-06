@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-for i in range(100):
-    print("{0:02}, {1}".format(i, hex(i)[2:]))
+for i in range(99):
+    print("{:02d}".format(i), end=", ")
+print("{:02d}".format(99))
