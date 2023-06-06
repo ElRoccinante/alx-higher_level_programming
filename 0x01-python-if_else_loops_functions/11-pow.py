@@ -1,11 +1,12 @@
 #!/usr/bin/python3
-def fizzbuzz():
-    for i in range(1, 101):
-        if i % 3 == 0 and i % 5 == 0:
-            print("FizzBuzz ", end="")
-        elif i % 3 == 0:
-            print("Fizz ", end="")
-        elif i % 5 == 0:
-            print("Buzz ", end="")
-        else:
-            print("{:d} ".format(i), end="")
+def pow(a, b):
+    result = 1
+    if b < 0:
+        a = 1 / a
+        b = -b
+    while b > 0:
+        if b % 2 == 1:
+            result *= a
+        a *= a
+        b //= 2
+    return result
