@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
-for i in range(ord('a'), ord('z')+1):
-    if chr(i) not in ['q', 'e']:
-        print("{}".format(chr(i)), end='')
+def uppercase(str):
+    for i in str:
+        if ord('a') <= ord(i) <= ord('z'):
+            i = chr(ord(i) - 32)
+        print("{:s}".format(i), end="")
+    print()
