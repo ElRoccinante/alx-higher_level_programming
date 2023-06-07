@@ -1,8 +1,6 @@
 #!/usr/bin/python3
-def print_alphabet_reverse():
-    for i in range(ord('z'), ord('a') - 1, -1):
-        print(chr(i), end='')
-        if i % 2 == 0:
-            print(chr(i - ord('a') + ord('A')), end='')
 
-print_alphabet_reverse()
+def remove_char_at(str, n):
+    if n < 0:
+        return str
+    return str[:n] + str[n + 1:]
