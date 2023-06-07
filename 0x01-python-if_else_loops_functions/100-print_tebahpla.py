@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-
-def printAlphaRev():
-    for c in range(ord('z'), ord('a') - 1, -1):
-        print("{}".format(chr(c) if c % 2 == 0 else chr(c - 32)), end="")
-
-
-printAlphaRev()
+for i in range(122, 96, -1):  # ASSCI code in reverse for lowercase
+    if i % 2:
+        i -= 32
+    print("{:c}".format(i), end="")
