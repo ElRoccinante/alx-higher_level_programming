@@ -1,12 +1,7 @@
 #!/usr/bin/python3
 
+import variable_load_5
+
 if __name__ == "__main__":
-    a = None
-
-    with open("variable_load_5.py", "r") as file:
-        for line in file:
-            if "a =" in line:
-                a = int(line.strip().split(" = ")[1])
-                break
-
+    a = variable_load_5.a
     print("{}".format(a))
