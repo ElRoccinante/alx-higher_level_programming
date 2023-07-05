@@ -1,27 +1,24 @@
 #!/usr/bin/python3
 """
-    add_numbers module
-
-    add_numbers supplies one function, add_numbers(num1, num2=98)
+This script defines a function for integer addition.
 """
 
 
-def add_numbers(num1, num2=98):
-    """Function that adds two numbers
-
-    Args:
-        num1: first number.
-        num2: second number, default 98
-
-    Raises:
-        TypeError: if num1, num2 are not int, float
-
-    Returns:
-        The sum of num1 and num2
+def add_integer(a, b=98):
     """
-    if type(num1) not in (int, float):
-        raise TypeError("num1 must be an integer or float")
-    if type(num2) not in (int, float):
-        raise TypeError("num2 must be an integer or float")
+    This function returns the integer addition of a and b.
 
-    return int(num1) + int(num2)
+    If either a or b is a non-integer and non-float, TypeError is raised.
+    Float arguments are typecasted.
+    """
+
+    # Check if a is not an integer or a float
+    if not isinstance(a, (int, float)):
+        raise TypeError("a must be an integer")
+
+    # Check if b is not an integer or a float
+    if not isinstance(b, (int, float)):
+        raise TypeError("b must be an integer")
+
+    # Cast a and b to integers and return their sum
+    return int(a) + int(b)
