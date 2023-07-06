@@ -1,10 +1,17 @@
 #!/usr/bin/python3
+"""
+    0-add_integer module
+
+    0-add_integer supplies one function, add_integer(a, b=98)
+    """
+
+
 def add_integer(a, b=98):
-    """Function add integers
+    """Function that add two integers
 
     Args:
-        a: integer.
-        b: integer, default 98
+        a: first integer.
+        b: second integer, default 98
 
     Raises:
         TypeError: if a, b are not int, float
