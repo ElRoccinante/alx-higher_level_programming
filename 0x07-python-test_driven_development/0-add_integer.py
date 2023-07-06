@@ -1,9 +1,4 @@
 #!/usr/bin/python3
-"""
-    0-add_integer module
-
-    0-add_integer supplies one function, add_integer(a, b=98)
-    """
 
 
 def add_integer(a, b=98):
