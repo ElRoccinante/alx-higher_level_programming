@@ -1,9 +1,4 @@
 #!/usr/bin/python3
-"""
-3-say_my_name.py module
-
-3-say_my_name.py module supplies one function: say_my_name
-"""
 
 
 def say_my_name(first_name, last_name=""):
