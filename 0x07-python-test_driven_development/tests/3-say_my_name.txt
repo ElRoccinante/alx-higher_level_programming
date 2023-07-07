@@ -13,7 +13,7 @@ Checking for regular case
 
 Cheking for firstname argument only
         >>> say_my_name("James")
-        My name is James
+        My name is James 
 
 Cheking firstname is empty string
         >>> say_my_name("", "James")
@@ -21,15 +21,15 @@ Cheking firstname is empty string
 
 Cheking lastname is empty string
         >>> say_my_name("James", "")
-        My name is James
+        My name is James 
 
 Cheking both spaces strings
         >>> say_my_name("  ", "  ")
-        My name is
+        My name is      
 
 Checking both empty strings
         >>> say_my_name("", "")
-        My name is
+        My name is  
 
 Checking for first argument is number
         >>> say_my_name(67, "Zichy")
