@@ -1,7 +1,14 @@
 #!/usr/bin/python3
-"""This defines a file-writing function."""
+"""Module that read a file and print your content
+"""
 
 
 def write_file(filename="", text=""):
-    with open(filename, "w", encoding="utf-8") as f:
-        return f.write(text)
+        """Function that write a file
+        Args:
+            filename (str, optional): path file. Defaults to "".
+            text (str, optional): content. Defaults to "".
+        """
+
+        with open(filename, mode='w', encoding='utf-8') as afile:
+                return (afile.write(text))
