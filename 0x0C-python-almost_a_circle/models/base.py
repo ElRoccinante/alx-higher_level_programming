@@ -7,10 +7,12 @@ import turtle
 
 
 class Base:
-    """This class serves as the base for all other classes in project 0x0C*.
+    """Base model.
 
-        Private Class Attributes:
-        __nb_object (int): The number of instantiated Base objects.
+    This Represents the "base" for all other classes in project 0x0C*.
+
+    Private Class Attributes:
+        __nb_object (int): Number of instantiated Bases.
     """
 
     __nb_objects = 0
@@ -29,10 +31,10 @@ class Base:
 
     @staticmethod
     def to_json_string(list_dictionaries):
-        """Args:
-        list_dictionaries (list): A list of dictionaries to be serialized.
-        Returns:
-        The JSON string representation of the list of dictionaries.
+        """Return the JSON serialization of a list of dicts.
+
+        Args:
+            list_dictionaries (list): A list of dictionaries.
         """
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
@@ -55,11 +57,13 @@ class Base:
 
     @staticmethod
     def from_json_string(json_string):
-        """Args:
-        json_string (str): A JSON string representation of a list of dictionaries.
+        """Return the deserialization of a JSON string.
+
+        Args:
+            json_string (str): A JSON str representation of a list of dicts.
         Returns:
-        If json_string is None or empty, an empty list is returned.
-        Otherwise, the Python list represented by json_string is returned.
+            If json_string is None or empty - an empty list.
+            Otherwise - the Python list represented by json_string.
         """
         if json_string is None or json_string == "[]":
             return []
@@ -144,9 +148,11 @@ class Base:
 
     @staticmethod
     def draw(list_rectangles, list_squares):
-        """Args:
-        list_rectangles (list): A list of Rectangle objects to be drawn.
-        list_squares (list): A list of Square objects to be drawn.
+        """Draw Rectangles and Squares using the turtle module.
+
+        Args:
+            list_rectangles (list): A list of Rectangle objects to draw.
+            list_squares (list): A list of Square objects to draw.
         """
         turt = turtle.Turtle()
         turt.screen.bgcolor("#b7312c")
