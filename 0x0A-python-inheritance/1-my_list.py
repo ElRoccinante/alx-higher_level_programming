@@ -1,7 +1,5 @@
 #!/usr/bin/python3
-"""
-0x0A. Python - Inheritance
-"""
+"""Define an sublcass or child list class myList"""
 
 
 class MyList(list):
