@@ -1,4 +1,5 @@
 #!/usr/bin/python
+"""define an subclass or child list class Mylist"""
 
 
 class Mylist(list):
