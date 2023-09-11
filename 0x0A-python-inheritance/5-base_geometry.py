@@ -2,6 +2,6 @@
 """Defines a base class for geometry"""
 
 
-class BaseGeometry:
+class BaseGeometry():
     """empty class BaseGeometry"""
     pass
