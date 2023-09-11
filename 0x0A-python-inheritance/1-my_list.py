@@ -3,14 +3,9 @@
 
 
 class MyList(list):
-    """The class MyList that inherits from list:
-        Public instance method:
-        - def print_sorted(self):
-                # that prints the list, sorted (ascending sort)s
-                # asssuming that elements are of type int
-    """
+    """class MyList that inherits from list"""
 
     def print_sorted(self):
-        """Public instance method"""
+        """Methode for print sorted list"""
         sorted_list = sorted(self, key=None, reverse=False)
         print(sorted_list)
