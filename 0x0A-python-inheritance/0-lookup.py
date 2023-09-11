@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""module for inheritence"""
 
 
 def lookup(obj):
