@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-The Base class serves as the base class
-for other classes in the project.
-"""
+"""Defines a base model class."""
 import json
 import csv
 import turtle
@@ -10,15 +7,11 @@ import turtle
 
 class Base:
     """
-    This class will be the “base” of
-    all other classes in this project.
+    Base model.
+    Thus represents the "base" for all other classes in project 0x0c.
 
-    description:
-        manage id attribute in all
-        my future classes
-    class attribute:
-        private:
-            __nb_objects (int)
+    Private Class Attributes:
+         __nb_object (int): Number of instantiated Bases.
     """
     __nb_objects = 0
 
@@ -38,7 +31,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """
-        return the string object of an list dictionaries
+        return the JSON serialization of a list of dictionaries
         """
         if list_dictionaries is None or len(list_dictionaries) == 0:
             return "[]"
