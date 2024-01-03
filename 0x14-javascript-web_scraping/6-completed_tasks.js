@@ -1,26 +1,30 @@
 #!/usr/bin/node
 
-const axios = require('axios');
-
 const url = process.argv[2];
+const request = require('request');
 
-axios.get(url)
-  .then(response => {
-    if (response.status === 200) {
-      const completed = {};
-      const tasks = response.data;
-      
-      tasks.forEach(task => {
-        if (task.completed === true) {
-          completed[task.userId] = (completed[task.userId] || 0) + 1;
+request(url, (err, { statusCode, body }) => {
+  if (err) {
+    return console.log(err);
+  }
+
+  if (statusCode === 200) {
+    const dic = {};
+    const tasks = JSON.parse(body);
+
+    tasks.every(({ userId, completed }) => {
+      if (completed) {
+        if (dic[userId]) {
+          return (dic[userId] += 1);
+        } else {
+          return (dic[userId] = 1);
         }
-      });
+      }
+      return true;
+    });
 
-      console.log(completed);
-    } else {
-      console.log('An error occurred. Status code: ' + response.status);
-    }
-  })
-  .catch(error => {
-    console.log(error.message);
-  });
+    return console.log(dic);
+  }
+
+  console.log(`Error code: ${statusCode}`);
+});
