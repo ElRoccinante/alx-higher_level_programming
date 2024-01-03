@@ -1,18 +1,22 @@
 #!/usr/bin/node
-const url = process.argv[2];
+
 const request = require('request');
 
-request(url, { method: 'GET' }, (err, { statusCode, body }) => {
-	  if (err) return console.log(err);
-	  if (statusCode === 200) {
-		      const { results } = JSON.parse(body);
-		      const count = results.map(({ characters }) => {
-			            const { length } = characters.filter(line => line.includes('18'));
-			            return length;
-			          }).reduce((a, b) => a + b);
+const url = process.argv[2];
+request(url, function (err, body) {
+  if (err) {
+    console.error(err);
+  } else {
+    let num = 0;
+    const { results } = JSON.parse(body.body);
 
-		      console.log(count);
-		    } else {
-			        console.log(`Erorr Code: ${statusCode}`);
-			      }
+    results.forEach((element, i) => {
+      for (const i in element.characters) {
+        if (element.characters[i].includes('/18/')) {
+          num++;
+        }
+      }
+    });
+    console.log(num);
+  }
 });
